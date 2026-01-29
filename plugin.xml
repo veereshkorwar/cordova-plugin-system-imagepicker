@@ -1,28 +1,36 @@
-<plugin id="cordova-plugin-system-imagepicker" version="1.0.0"
-        xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-    
-    <name>SystemImagePicker</name>
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-system-imagepicker"
+        version="1.0.0">
+
+    <name>System Image Picker</name>
+    <description>Cordova plugin for picking images using system picker</description>
+    <license>MIT</license>
+    <keywords>cordova,image,picker,media</keywords>
+    <engines>
+        <engine name="cordova" version=">=10.0.0"/>
+    </engines>
+
+    <!-- Android platform -->
+    <platform name="android">
+
+        <!-- Map feature/service to Java class -->
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="MediaPicker">
+                <param name="android-package" value="com.example.mediapicker.MediaPicker" />
+            </feature>
+        </config-file>
+
+        <!-- Java source -->
+        <source-file src="src/android/MediaPicker.java" target-dir="src/com/example/mediapicker"/>
+    </platform>
+
+    <!-- JS entrypoint -->
     <js-module src="www/imagePicker.js" name="imagePicker">
         <clobbers target="window.imagePicker" />
     </js-module>
 
-      <platform name="android">
-
-    <config-file target="res/xml/config.xml" parent="/*">
-        <feature name="MediaPicker">
-            <param name="android-package"
-                   value="com.example.mediapicker.MediaPicker" />
-        </feature>
-    </config-file>
-
-    <source-file
-        src="src/android/MediaPicker.java"
-        target-dir="src/com/example/mediapicker" />
-
-    </platform>
-
-    <platform name="ios">
-        <source-file src="src/ios/MediaPicker.swift" />
-    </platform>
+      <platform name="ios">
+         <source-file src="src/ios/MediaPicker.swift" />
+      </platform>
 </plugin>
