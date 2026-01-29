@@ -7,8 +7,19 @@
         <clobbers target="window.imagePicker" />
     </js-module>
 
-    <platform name="android">
-        <source-file src="src/android/MediaPicker.java" target-dir="app/src/main/java/com/example/mediapicker"/>
+      <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="MediaPicker">
+            <param name="android-package"
+                   value="com.example.mediapicker.MediaPicker" />
+        </feature>
+    </config-file>
+
+    <source-file
+        src="src/android/MediaPicker.java"
+        target-dir="src/com/example/mediapicker" />
+
     </platform>
 
     <platform name="ios">
