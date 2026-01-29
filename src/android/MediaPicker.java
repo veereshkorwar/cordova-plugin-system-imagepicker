@@ -1,4 +1,4 @@
-package com.example.mediapicker;
+package com.example.mediapicker.MediaPicker;
 
 import android.app.Activity;
 import android.content.Intent;
