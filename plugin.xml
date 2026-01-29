@@ -1,0 +1,17 @@
+<plugin id="cordova-plugin-system-imagepicker" version="1.0.0"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <name>SystemImagePicker</name>
+    <js-module src="www/imagePicker.js" name="imagePicker">
+        <clobbers target="window.imagePicker" />
+    </js-module>
+
+    <platform name="android">
+        <source-file src="src/android/MediaPicker.java" target-dir="app/src/main/java/com/example/mediapicker"/>
+    </platform>
+
+    <platform name="ios">
+        <source-file src="src/ios/MediaPicker.swift" />
+    </platform>
+</plugin>

@@ -1,0 +1,9 @@
+{
+  "name": "cordova-plugin-system-imagepicker",
+  "version": "1.0.0",
+  "description": "Drop-in replacement for Telerik ImagePicker using system pickers",
+  "cordova": {
+    "id": "cordova-plugin-system-imagepicker",
+    "platforms": ["android", "ios"]
+  }
+}
