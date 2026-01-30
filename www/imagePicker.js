@@ -1,6 +1,6 @@
 const exec = require('cordova/exec');
 
-const imagePicker = {
+const systemImagePicker = {
   getPictures: function(successCallback, errorCallback, options) {
     var opts = options || {};
     var maximumImagesCount = opts.maximumImagesCount || 10;
@@ -20,4 +20,4 @@ const imagePicker = {
   }
 };
 
-module.exports = imagePicker;
+module.exports = systemImagePicker;
