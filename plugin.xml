@@ -26,7 +26,7 @@
     </platform>
 
     <!-- JS entrypoint -->
-    <js-module src="www/imagePicker.js" name="imagePicker">
+    <js-module src="www/imagePicker.js" name="systemImagePicker">
         <clobbers target="window.systemImagePicker" />
     </js-module>
 
