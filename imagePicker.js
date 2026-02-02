@@ -12,9 +12,7 @@ const imagePicker = {
 
     if (cordova.platformId === 'android') {
       exec(successCallback, errorCallback, 'MediaPicker', 'pickAndroid', [pickOptions]);
-    } else if (cordova.platformId === 'ios') {
-      exec(successCallback, errorCallback, 'MediaPicker', 'pickIOS', [pickOptions]);
-    } else {
+    }else {
       errorCallback('Unsupported platform');
     }
   }
