@@ -4,6 +4,6 @@
   "description": "ImagePicker using system pickers",
   "cordova": {
     "id": "cordova-plugin-system-imagepicker",
-    "platforms": ["android", "ios"]
+    "platforms": ["android"]
   }
 }
