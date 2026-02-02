@@ -29,8 +29,4 @@
     <js-module src="www/imagePicker.js" name="systemImagePicker">
         <clobbers target="window.systemImagePicker" />
     </js-module>
-
-      <platform name="ios">
-         <source-file src="src/ios/MediaPicker.swift" />
-      </platform>
 </plugin>
